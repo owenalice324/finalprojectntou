@@ -1,0 +1,121 @@
+<html>
+  <head>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/addons/p5.sound.js"></script>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css'>
+    <style type = "text/css">
+      .container{
+        border: 3px black solid;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+        height: 50%;
+        margin: 10% 20% ;
+		color:white;
+		font-size:50px;
+      }
+      .role_btn{
+        display: flex;
+        flex-direction: row;
+      }
+	  body{
+      background:url(lol.png)  no-repeat center center;
+      background-size:cover;
+      background-attachment:fixed;
+      background-color:#CCCCCC;
+    }
+    .go{border:0;
+      background-color:#003C9D;
+      color:#fff;
+      border-radius:10px;
+      cursor:pointer;
+      font-size:50px;
+      }
+
+    .go:hover{
+      color:#003C9D;
+      background-color:#fff;
+      border:2px #003C9D solid;
+    }
+    .button{
+      border:0;
+      background-color:#003C9D;
+      color:#fff;
+      border-radius:50px;
+      cursor:pointer;
+      font-size: 30px;
+      position: absolute;
+      right: 30px;
+      bottom: 30px;
+      padding: 10px;
+    }
+    .button:hover{
+      color:#003C9D;
+      background-color:#fff;
+      border:2px #003C9D solid;
+    }
+    </style>
+  </head>
+  <script>
+    function pick1(){
+        document.getElementById("player").innerHTML=("Stanley")
+    }
+    function pick2(){
+        document.getElementById("player").innerHTML=("Sam")
+    }
+    function pick3(){
+        document.getElementById("player").innerHTML=("NL")
+    }
+    function pick4(){
+        document.getElementById("player").innerHTML=("Butterfly")
+    }
+    function pick5(){
+        document.getElementById("player").innerHTML=("Asiagodtone")
+    }
+    function pick6(){
+        document.getElementById("player").innerHTML=("巨錘瑞斯")
+    }
+    function go(){
+        if (document.getElementById("player").innerHTML=="  "){
+            alert("please choose role");
+        }
+        else{
+            window.location.href=document.getElementById("player").innerHTML+'game.html';
+        }
+    }
+    
+    callBackdata(document.getElementById("player").innerHTML);
+
+  </script>
+  <body>
+      
+	   <div class="container">
+	   <caption>符文大地跑跑薑餅人</caption>
+       <p>Choose Role</p>
+       <div class="role_btn">
+       
+          <button type="button" name="role" value="role1" onclick="pick1()"><img src="role1.jpg" alt="role1" width="80px" height="80px"></button>
+          <button type="button" name="role" value="role2" onclick="pick2()"><img src="role2.jpg" alt="role2" width="80px" height="80px"></button>
+          <button type="button" name="role" value="role3" onclick="pick3()"><img src="role3.jpg" alt="role3" width="80px" height="80px"></button>
+          <button type="button" name="role" value="role4" onclick="pick4()"><img src="role4.png" alt="role4" width="80px" height="80px"></button>
+          <button type="button" name="role" value="role5" onclick="pick5()"><img src="role5.jpg" alt="role5" width="80px" height="80px"></button>
+          <button type="button" name="role" value="role6" onclick="pick6()"><img src="role6.jpg" alt="role6" width="80px" height="80px"></button>
+         </div>
+        <p>You choose:<span id="player">  </span></p>
+        
+       
+       <br><br>
+       
+       <button class="go" type="submit" onclick=go()>Go</button>
+       <a href="網程期末提案00657137+00657144.pptx" class="button">網頁說明簡報</a>
+       
+     </div>
+    
+    
+  </body>
+</html>
